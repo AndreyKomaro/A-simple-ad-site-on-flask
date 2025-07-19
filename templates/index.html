@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <div class="add_adv">
+            <a href="{{ url_for('profile') }}">Вернуться в профиль</a>
+        </div>
+        <p>Пользователь: {{ current_user['username'] }}
+    {% endif %}
+    <h1>Объявления</h1>
+    <hr>
+    {{ super() }}
+{% endblock %}

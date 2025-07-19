@@ -1,0 +1,150 @@
+.topnav {
+    background-color: #00c7ff;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+.topnav a:hover {
+    color: white;
+}
+
+
+.topnav-right {
+    float: right;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #21DB56;
+}
+
+.form-contact label {
+    display: inline-block;
+    min-width: 80px;
+}
+
+.form-contact p {
+    margin: 10px 0 10px 0;
+}
+
+.form-contact input[type=submit], textarea {
+    font-size: 16px;
+}
+
+.form-contact .invalid {
+    background: #FF9898;
+}
+
+.form-contact .invalid-feedback {
+    color: #CC0000;
+}
+
+.flash {
+    padding: 10px;
+}
+
+.flash.success {
+    border: 1px solid #21DB56;
+    background: #AEFFC5;
+}
+
+.flash.error {
+    border: 1px solid #FF4343;
+    background: #FF9C9C;
+}
+
+.add_adv {
+    float: right;
+    padding: 14px 16px;
+    font-size: 24px;
+}
+
+.add_adv a {
+    float: right;
+    color: #00c7ff;
+    text-decoration: none;
+}
+
+.add_adv a:hover {
+    color: black;
+}
+
+.adv {
+    vertical-align: top;
+}
+
+table {
+    width: 100%;
+
+}
+
+td {
+    padding: 0 20px 0 20px;
+}
+
+.image {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: #eee;
+    padding: 10px;
+}
+
+#imag {
+    width: 15%;
+}
+
+h3 {
+    text-align: center;
+    color: orange;
+}
+
+#cont {
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.profile-load {
+    margin-top: 10px;
+    overflow: hidden;
+    max-width: 150px;
+}
+
+.profile-load input[type=submit], input[type=file] {
+    width: 100%;
+    font-size: 18px;
+}
+
+.profile-load p {
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.profile-panel {
+    padding: 0 0 0 10px;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    resize: none;
+}
+
+hr {
+    border-color: #00c7ff;
+}
+
+#delet {
+    float: right;
+}

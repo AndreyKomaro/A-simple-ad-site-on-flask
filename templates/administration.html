@@ -1,0 +1,41 @@
+{% extends 'admin_base.html' %}
+
+{% block content %}
+    <h3>Пользователи:</h3>
+    <hr>
+    {% for user in users %}
+        <table>
+            <tr>
+                <td><h4>{{ user.email }}</h4></td>
+                <td><h4>{{ user.username }}</h4></td>
+                <td><h4>{{ user.date_created }}</h4></td>
+                <td>
+                    <form action="{{ url_for('administration') }}" method="post">
+                        <input type="hidden" name="user_id" value="{{ user.id }}">
+                        <input type="submit" value="Удалить пользователя" id="delet">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><h3>Объявления пользовтеля:</h3></td>
+            </tr>
+        {% if aduser(user.id) %}
+            {% for ad in aduser(user.id) %}
+                <tr>
+                    <td id="imag">
+                        <img src="{{ url_for('kart', im_id=ad.id) }}" class="image" alt="Foto">
+                    </td>
+                    <td colspan="2" id="cont">{{ ad.content }}</td>
+                    <td>
+                        <form action="{{ url_for('administration') }}" method="post">
+                            <input type="hidden" name="ad_id" value="{{ ad.id }}">
+                            <input type="submit" value="Удалить" id="delet">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+        </table>
+        <hr>
+    {% endfor %}
+{% endblock %}

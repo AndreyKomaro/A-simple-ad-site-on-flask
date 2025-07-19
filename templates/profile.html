@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="add_adv">
+        <a href="/addadv">Добавить объявление</a>
+        <p><a href="{{ url_for('logout') }}">Выйти из профиля</a>
+    </div>
+    <p>Пользователь: {{ current_user['username'] }}
+    <p>Email: {{ current_user['email'] }}
+    <h2>Мои объявления</h2>
+    <hr>
+    {{ super() }}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="add_adv">
+        <a href="{{ url_for('profile') }}">Вернуться в профиль</a>
+    </div>
+    <p>Пользователь: {{ current_user['username'] }}
+    <form action="{{ url_for('addadv') }}" method="post" class="form-contact" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {% for field in form if field.name not in ['csrf_token', 'submit'] %}
+            <p>{{ field.label() }}
+            {% if field.errors %}
+                {{ field(class="invalid") }}
+                <span class="invalid-feedback">
+                   {% for e in field.errors %}
+                       {{ e }}
+                   {% endfor %}
+                </span>
+            {% else %}
+                {{ field() }}
+            {% endif %}
+        {% endfor %}
+        <p>{{ form.submit() }}
+    </form>
+{% endblock %}
